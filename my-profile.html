@@ -1,51 +1,54 @@
-<!DOCTYPE html>
-<html class="no-js">
+<html ng-app="resources">
+    <head>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>My Profile | Cheesources</title>
+        <title>My Profile | Cheesources</title>
 
-    <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
 
-</head>
+        <script src="public/vendor/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
 
-<body>
-    <div id="page">
-    <header>
-    <h1>My Profile</h1>
-    </header>
-    <aside class="sider">
-        <div class="profile">
-            <div class="profile-image">
-                <img src="assets/images/cheese-abe.jpg" />
-            </div>
-            <div class="personal-info">
-                Nick Switzer
-                Amateur Cheese Sculptor
-            </div>
-        </div>
-    </aside>
-    <main class="content">
-        <h2>My Resources</h2><a href="resources.html">Find More</a>
-        <div class="filters">
-            <select name="resource-type">
-                <option value="document">Document</option>
-                <option value="book">Book</option>
-                <option value="podcast">Podcast</option>
-            </select>
-        </div>
-        <div class="resources-list">
-            <ul>
-                <li>Document</li>
-                <li>Book</li>
-                <li>Podcast</li>
-            </ul>
-        </div>
-    </main>
-    </div>
-</body>
+    </head>
+    <body>
+    	<div id="page">
 
+    		<header>
+        		<h1>My Profile</h1>
+        	</header>
+
+        	<aside class="sider">
+            	<div class="profile">
+                	<div class="profile-image">
+                    	<img src="assets/images/cheese-abe.jpg" />
+                	</div>
+                	<div class="personal-info">
+                    	Nick Switzer
+                    	Amateur Cheese Sculptor
+                	</div>
+            	</div>
+        	</aside>
+
+        	<main class="content" ng-controller="rsrcFltr as fltr">
+
+        		<h2>My Resources</h2><a href="resources.html">Find More</a>
+
+    			<div class="filters">
+    				<select name="filter" id="filter" ng-model="filter" ng-options="type for type in docTypes" ng-change="changeFilter()"></select>
+    				<a ng-click="resetFilter()" class="filter-reset">Reset Filter</a>
+    			</div>
+
+    			<div class="resource-list">
+                    <ul>
+                        <li class="document" ng-repeat="document in documents | filter: filter">{{document.type}} {{document.title}}</li>
+                    </ul>
+    			</div>
+
+    		</main>
+
+    	</div>
+    </body>
 </html>
