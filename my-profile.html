@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app="resources">
     <head>
 
@@ -37,13 +38,14 @@
         		<h2>My Resources</h2><a href="resources.html">Find More</a>
 
     			<div class="filters">
+                    <input type="text" class="form-control" placeholder="Search Resources" ng-model="searchDocs">
     				<select name="filter" id="filter" ng-model="filter" ng-options="type for type in docTypes" ng-change="changeFilter()"></select>
     				<a ng-click="resetFilter()" class="filter-reset">Reset Filter</a>
     			</div>
 
     			<div class="resource-list">
                     <ul>
-                        <li class="document" ng-repeat="document in documents | filter: filter">{{document.type}} {{document.title}}</li>
+                        <li class="document" ng-repeat="document in documents | filter: filter | filter: searchDocs">{{document.type}} {{document.title}}</li>
                     </ul>
     			</div>
 

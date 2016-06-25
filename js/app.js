@@ -4,7 +4,7 @@
 
 	app.controller('rsrcFltr', function($scope) {
 
-	// define list of documents
+	// Define list of documents
 	$scope.documents = [
 	 	{
 	 		type:"file",
@@ -43,17 +43,20 @@
 	 	}
 	];
 
-	// define filter list
+	// Define filter list
 	$scope.docTypes = ["file","book","podcast"];
 
-	// initialize filter object
+	// Initialize filter object
 	$scope.filter = {};
 
-	// reset the filter
+	// Reset the filter
 	$scope.resetFilter = function() {
 	  // set filter object back to blank
 	  $scope.filter = {}; 
 	}
+
+	// Initialize search object
+	$scope.searchDocs = '';
 
 	});
 })();
