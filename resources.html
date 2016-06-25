@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html ng-app="resources">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+	    <meta charset="utf-8">
+	        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Resources | Cheesources</title>
+	        <title>Resources | Cheesources</title>
 
-    <link rel="stylesheet" href="css/style.css">
+	        <link rel="stylesheet" href="css/style.css">
 
-</head>
+	        <script src="vendor/angular/angular.min.js"></script>
+	        <script type="text/javascript" src="js/app.js"></script>
 
-<body>
-    
-</body>
+	</head>
+
+	<body>
+		<div id="page">
+
+			<nav class="main-nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Cheese Blog</a></li>
+					<li><a href="#">Cheese Directory</a></li>
+				</ul>
+			</nav>
+
+			<header>
+	        	<h1>Resources</h1>
+	        </header>
+
+	        <nav class="utility-nav">
+                <ul>
+                	<li><a href="resources.html" class="active">Resources</a></li>
+                    <li><a href="my-profile.html">My Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+
+	        <main class="content" ng-controller="rsrcFltr as fltr">
+
+	        	<a href="my-profile.html">My Profile</a>
+
+    			<div class="filters">
+                    <input type="text" class="form-control" placeholder="Search Resources" ng-model="searchDocs">
+    				<select name="filter" id="filter" ng-model="filter" ng-options="type for type in docTypes" ng-change="changeFilter()"></select>
+    				<a ng-click="resetFilter()" class="filter-reset">Reset Filter</a>
+    			</div>
+
+    			<div class="resource-list">
+                    <ul>
+                        <li class="document" ng-repeat="document in allDocuments | filter: filter | filter: searchDocs">{{document.type}} {{document.title}}</li>
+                    </ul>
+    			</div>
+
+	        </main>
+		</div>
+
+	    
+	</body>
 
 </html>
