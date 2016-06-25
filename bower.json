@@ -1,0 +1,18 @@
+{
+  "name": "cheesources",
+  "description": "The number one resource for any type of cheese sculptor.",
+  "main": "index.js",
+  "authors": [
+    "Nick Switzer"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nswitzer/cheesources",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "cheesources",
+  "version": "1.0.0",
+  "description": "The number one resource for any type of cheese sculptor.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nswitzer/cheesources.git"
+  },
+  "author": "Nick Switzer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nswitzer/cheesources/issues"
+  },
+  "homepage": "https://github.com/nswitzer/cheesources#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}

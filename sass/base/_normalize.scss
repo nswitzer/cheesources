@@ -1,0 +1,253 @@
+//
+// Base Normalization
+//
+
+//
+// Box Sizing
+//
+
+* {
+  box-sizing: border-box;
+}
+
+//
+// HTML5 display definitions
+//
+
+//Corrects block display not defined in IE6/7/8/9 & FF3
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
+  display: block;
+}
+
+// Corrects inline-block display not defined in IE6/7/8/9 & FF3
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+// Prevents modern browsers from displaying 'audio' without controls
+// Remove excess height in iOS5 devices
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+// Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+// Known issue: no IE6 support
+[hidden] {
+  display: none;
+}
+
+
+//
+// Base
+//
+
+html {
+  font-size: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+}
+
+// Addresses font-family inconsistency between 'textarea' and other form elements.
+html,
+button,
+input,
+select,
+textarea {
+  font-family: $base-font-family;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  // Set the base font size here rather than html to maintain rem compatibility.
+  font-size: $base-font-size;
+}
+
+// Addresses styling not present in IE7/8/9, S5, Chrome
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  white-space: nowrap;
+}
+
+// Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+b,
+strong {
+  font-weight: bold;
+}
+
+// Addresses styling not present in S5, Chrome
+dfn {
+  font-style: italic;
+}
+
+// Addresses styling not present in IE6/7/8/9
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+// Corrects font family set oddly in IE6, S4/5, Chrome
+//en.wikipedia.org/wiki/User:Davidgothberg/Test59
+pre,
+code,
+kbd,
+samp,
+tt,
+var {
+  font-family: $font-monospace; 
+  font-size: 1em;
+}
+
+// Improves readability of pre-formatted text in all browsers
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+// Addresses CSS quotes not supported in IE6/7
+// Addresses quote property not supported in S4
+q {
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 75%;
+}
+
+// Prevents sub and sup affecting line-height in all browsers
+// gist.github.com/413930
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+
+//
+// Lists
+//
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+
+//
+// Embedded Content
+//
+
+// 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+// 2. Improves image quality when scaled in IE7
+// code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+img {
+  border: 0; /* 1 */
+  -ms-interpolation-mode: bicubic; /* 2 */
+  max-width: 100%;
+  height: auto;
+}
+
+// Corrects overflow displayed oddly in IE9
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+
+//
+// Forms
+//
+
+form {
+  margin: 0;
+}
+
+button,
+input {
+  line-height: normal; /* 1 */
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; /* 2 */
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
+
+
+//
+// Tables
+//
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

@@ -1,0 +1,31 @@
+//
+// Mixin Definitions
+//
+
+
+// Media Queries
+@mixin bp($size, $default: false, $direction: 'min-width') {
+    @if ($direction == 'max-width') {
+        $size: $size - 1;
+    }
+
+    @media (#{$direction}: #{$size}) {
+        @content;
+    }
+
+    @if ($default) {
+        .no-mediaqueries & {
+            @content;
+        }
+    }
+}
+
+// Clearfix
+@mixin clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
