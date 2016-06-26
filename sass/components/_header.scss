@@ -11,3 +11,16 @@ header.main {
 #page-title {
 	margin: 0;
 }
+
+header.secondary {
+	@include clearfix;
+	margin-bottom: $spacing-unit;
+
+	h2 {
+		float: left;
+	}
+
+	.button {
+		float: right;
+	}
+}

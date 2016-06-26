@@ -13,8 +13,11 @@ $basic-orange: #ed830d;
 $burnt-orange: #a64f03;
 $faded-orange: #d38c4e;
 $gray: #c8bfb8;
+$white: #ffffff;
 
 // Element Color Definitions
+$base-font-color: darken($brown, 25%);
+
 $body-bg-color: $gray;
 
 $header-bg-color: $brown;
@@ -26,6 +29,20 @@ $utility-nav-font-color-hover: $gray;
 $link-font-color: $burnt-orange;
 $link-font-color-hover: darken($burnt-orange, 15%);
 
+$resource-list-bg-color-odd: lighten($brown, 25%);
+$resource-list-bg-color-even: lighten($faded-orange, 25%);
+
+$filters-bg-color: $faded-orange;
+
+$form-input-bg-color: $white;
+$form-input-font-color: darken($brown, 25%);
+$form-input-border-color: $gray;
+
+$button-bg-color: $burnt-orange;
+$button-bg-color-hover: darken($burnt-orange, 10%);
+$button-font-color: $white;
+
+$profile-bg-color: lighten($faded-orange, 10%);
 
 
 //
@@ -33,18 +50,14 @@ $link-font-color-hover: darken($burnt-orange, 15%);
 //
 
 $open-sans: 'Open Sans', sans-serif; // Available weights: 400, 700
-$merriweather: 'Merriweather', serif; // Available weights: 400, 700
-$arial: Arial, sans-serif;
-$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+$icomoon: 'icomoon';
 
 // Sitewide Font Definitions
 $base-font-family: $open-sans;
 $base-font-size: 16px;
 $small-base-font-size:  $base-font-size * 0.875;
 $base-font-weight: 400;
-$base-font-color: darken($brown, 25%);
 $base-line-height: 1.5;
-$base-font-monospace: $courier;
 
 // Element Font Definitions
 $header-font-weight: 700;
@@ -55,6 +68,9 @@ $h3-font-size: 24px;
 $h4-font-size: 18px;
 $h5-font-size: 14px;
 $h6-font-size: 12px;
+
+$form-input-font-size: 16px;
+
 
 //
 // Margins, Spacing and Dimensions

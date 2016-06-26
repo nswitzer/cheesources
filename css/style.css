@@ -44,6 +44,7 @@ h1 {
 
 h2 {
   font-size: 30px;
+  margin-bottom: 15px;
 }
 
 h3 {
@@ -81,9 +82,59 @@ a:hover {
   transition: 0.25s;
 }
 
+.button {
+  background-color: #a64f03;
+  color: #ffffff;
+  padding: 7.5px 15px;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #743702;
+  color: #ffffff;
+}
+
 nav ul,
 nav ol {
   list-style: none;
+}
+
+input,
+select {
+  font-size: 16px;
+  color: #443320;
+  background-color: #ffffff;
+  border: 1px solid #c8bfb8;
+  border-radius: 0;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+input[type=text] {
+  padding: 7.5px;
+}
+
+select {
+  padding: 7.5px;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../assets/images/select-arrow.png);
+  background-position: 96% 50%;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../assets/fonts/icomoon.eot?hh785b");
+  src: url("../assets/fonts/icomoon.eot?hh785b#iefix") format("embedded-opentype"), url("../assets/fonts/icomoon.ttf?hh785b") format("truetype"), url("../assets/fonts/icomoon.woff?hh785b") format("woff"), url("../assets/fonts/icomoon.svg?hh785b#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 header.main {
@@ -94,6 +145,24 @@ header.main {
 
 #page-title {
   margin: 0;
+}
+
+header.secondary {
+  margin-bottom: 30px;
+}
+
+header.secondary:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header.secondary h2 {
+  float: left;
+}
+
+header.secondary .button {
+  float: right;
 }
 
 .utility-nav {
@@ -136,6 +205,138 @@ header.main {
   font-weight: 700;
 }
 
+.resource-list ul {
+  list-style: none;
+}
+
+.resource-list li {
+  padding: 15px 30px;
+}
+
+.resource-list li:nth-child(odd) {
+  background-color: #cdb496;
+}
+
+.resource-list li:nth-child(even) {
+  background-color: #ecceb4;
+}
+
+.resource-list .document .title:before {
+  font-family: "icomoon";
+  margin-right: 15px;
+}
+
+.resource-list .file .title:before {
+  content: "\e924";
+}
+
+.resource-list .book .title:before {
+  content: "\e920";
+}
+
+.resource-list .podcast .title:before {
+  content: "\e910";
+}
+
+.resource-list .remove {
+  font-family: "icomoon";
+  float: right;
+}
+
+.resource-list .remove:before {
+  content: "\ea0f";
+  display: inline-block;
+  -webkit-transition: all 300ms 0s ease-in-out;
+  -moz-transition: all 300ms 0s ease-in-out;
+  -ms-transition: all 300ms 0s ease-in-out;
+  -o-transition: all 300ms 0s ease-in-out;
+  transition: all 300ms 0s ease-in-out;
+}
+
+.resource-list .remove:hover:before {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.filters {
+  background-color: #d38c4e;
+  padding: 15px 30px;
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+
+@media (min-width: 800px) {
+  .filters input,
+  .filters select {
+    width: 33.33333%;
+    margin: 0 15px 0 0;
+  }
+}
+
+.filter-reset {
+  cursor: pointer;
+}
+
+.profile {
+  background-color: #dda777;
+  margin: 0 0 30px 0;
+}
+
+.profile:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.profile-image {
+  width: 60%;
+  float: left;
+}
+
+@media (min-width: 600px) {
+  .profile-image {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .profile-image {
+    width: 100%;
+    float: none;
+  }
+}
+
+.profile-meta {
+  padding: 7.5px 15px;
+  width: 40%;
+  float: left;
+}
+
+@media (min-width: 600px) {
+  .profile-meta {
+    padding: 15px 30px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .profile-meta {
+    width: 100%;
+    float: none;
+  }
+}
+
+.profile-meta .title {
+  font-weight: 700;
+}
+
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
@@ -152,7 +353,7 @@ header.main {
   padding: 0 30px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .sidebar-left,
   .content {
     float: left;
@@ -163,7 +364,7 @@ header.main {
   padding: 0 30px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .sidebar-left {
     width: 33.33333%;
     padding: 0 30px;
@@ -176,7 +377,7 @@ header.main {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .content {
     width: 66.66666%;
     padding: 0 30px 0 0;

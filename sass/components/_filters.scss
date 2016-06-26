@@ -1,0 +1,24 @@
+//
+// Filters Component Styles
+//
+
+.filters {
+	background-color: $filters-bg-color;
+	padding: $spacing-unit/2 $spacing-unit;
+
+	input,
+	select {
+		width: 100%;
+		margin: 0 0 $spacing-unit/2 0;
+
+		@include bp($large) {
+			width: 33.33333%;
+			margin: 0 $spacing-unit/2 0 0;
+		}
+	}
+
+}
+
+.filter-reset {
+	cursor: pointer;
+}
