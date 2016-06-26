@@ -4,39 +4,6 @@
 
 
 //
-// Fonts
-//
-
-$base-font-size:   16px;
-
-$base-line-height: 1.5;
-
-$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
-$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
-
-$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
-$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
-$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
-$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
-
-// For an explanation of why "sans-serif" is at the end of this list, see
-// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
-
-// Now create some variables for the font stacks we want to use on this site.
-
-/// The font family set on the html element.
-$base-font-family: $verdana;
-
-/// The font family set on the body element.
-$font-body:        $verdana;
-
-/// Monospace font
-$font-monospace:   $courier;
-
-
-//
 // Colors
 //
 
@@ -46,3 +13,54 @@ $basic-orange: #ed830d;
 $burnt-orange: #a64f03;
 $faded-orange: #d38c4e;
 $gray: #c8bfb8;
+
+// Element Color Definitions
+$body-bg-color: $gray;
+
+$header-bg-color: $brown;
+
+$utility-nav-bg-color: $faded-orange;
+$utility-nav-font-color: darken($brown, 25%);
+$utility-nav-font-color-hover: $gray;
+
+
+
+//
+// Fonts
+//
+
+$open-sans: 'Open Sans', sans-serif; // Available weights: 400, 700
+$merriweather: 'Merriweather', serif; // Available weights: 400, 700
+$arial: Arial, sans-serif;
+$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Sitewide Font Definitions
+$base-font-family: $open-sans;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-font-color: darken($brown, 25%);
+$base-line-height: 1.5;
+$base-font-monospace: $courier;
+
+// Element Font Definitions
+$header-font-weight: 700;
+$header-line-height: 1;
+$h1-font-size: 36px;
+$h2-font-size: 30px;
+$h3-font-size: 24px;
+$h4-font-size: 18px;
+$h5-font-size: 14px;
+$h6-font-size: 12px;
+
+//
+// Margins, Spacing and Dimensions
+//
+
+// Sitewide Spacing Definitions
+$spacing-unit: 30px;
+$content-width: 960px;
+
+// Breakpoints
+$small: 600px;
+$large: 800px;
+$max: $content-width;

@@ -29,3 +29,12 @@
         clear: both;
     }
 }
+
+// Simple Fade
+@mixin fade($length: .25s) {
+    -o-transition: $length;
+    ms-transition: $length;
+    moz-transition: $length;
+    webkit-transition: $length;
+    transition: $length;
+}

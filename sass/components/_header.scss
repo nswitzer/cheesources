@@ -1,0 +1,13 @@
+//
+// Main Site Header Styles
+//
+
+header.main {
+	min-height: 150px;
+	background: $header-bg-color;
+	padding: $spacing-unit;
+}
+
+#page-title {
+	margin: 0;
+}
