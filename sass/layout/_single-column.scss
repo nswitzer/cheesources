@@ -1,0 +1,14 @@
+//
+// Single Column Layout Styles
+//
+
+.one-column {
+
+	.content {
+		padding: 0 $spacing-unit;
+
+		@include bp($max) {
+			padding: 0;
+		}
+	}
+}

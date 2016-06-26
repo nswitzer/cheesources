@@ -63,12 +63,11 @@
 		}
 	}
 
-	.remove {
+	.action {
 		font-family: $icomoon;
 		float: right;
 
 		&:before {
-			content: "\ea0f";
 			display: inline-block;
 			-webkit-transition: all 300ms 0s ease-in-out;
 			-moz-transition: all 300ms 0s ease-in-out;
@@ -86,6 +85,22 @@
 				-o-transform: rotate(360deg);
     			transform: rotate(360deg);
 			}
+			
+		}
+	}
+
+	.remove {
+		
+		&:before {
+			content: "\ea0f";
+			
+		}
+	}
+
+	.add {
+
+		&:before {
+			content: "\ea0a";
 			
 		}
 	}

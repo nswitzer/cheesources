@@ -2,34 +2,37 @@
 // Sidebar Left Responsive Layout
 //
 
-.sidebar-left,
-.content {
-	padding: 0 $spacing-unit;
-	@include bp($large) {
-		float: left;
-	}
-}
+.two-column {
 
-.sidebar-left {
-	padding: 0 $spacing-unit;
-
-	@include bp($large) {
-		width: 33.33333%;
+	.sidebar-left,
+	.content {
 		padding: 0 $spacing-unit;
+		@include bp($large) {
+			float: left;
+		}
 	}
 
-	@include bp($max) {
-		padding: 0 $spacing-unit 0 0;
-	}
-}
+	.sidebar-left {
+		padding: 0 $spacing-unit;
 
-.content {
-	@include bp($large) {
-		width: 66.66666%;
-		padding: 0 $spacing-unit 0 0;
+		@include bp($large) {
+			width: 33.33333%;
+			padding: 0 $spacing-unit;
+		}
+
+		@include bp($max) {
+			padding: 0 $spacing-unit 0 0;
+		}
 	}
 
-	@include bp($max) {
-		padding: 0;
+	.content {
+		@include bp($large) {
+			width: 66.66666%;
+			padding: 0 $spacing-unit 0 0;
+		}
+
+		@include bp($max) {
+			padding: 0;
+		}
 	}
 }

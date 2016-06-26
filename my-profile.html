@@ -34,7 +34,7 @@
                 </div>
             </nav>
 
-            <div class="wrapper">
+            <div class="wrapper two-column">
 
             	<aside class="sidebar-left">
                 	<div class="profile">
@@ -62,7 +62,7 @@
 
         			<div class="resource-list">
                         <ul>
-                            <li class="document {{document.type}}" ng-repeat="document in myDocuments | filter: filter | filter: searchDocs"><span class="title">{{document.title}}</span> <a class="remove" href="#" title="Remove Item"></a></li>
+                            <li class="document {{document.type}}" ng-repeat="document in myDocuments | filter: filter | filter: searchDocs"><span class="title">{{document.title}}</span> <a class="remove action" href="#" title="Remove Item"></a></li>
                         </ul>
         			</div>
 

@@ -17,10 +17,16 @@ header.secondary {
 	margin-bottom: $spacing-unit;
 
 	h2 {
-		float: left;
+
+		@include bp($small) {
+			float: left;
+		}
 	}
 
 	.button {
-		float: right;
+
+		@include bp($small) {
+			float: right;
+		}
 	}
 }

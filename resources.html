@@ -35,7 +35,7 @@
                 </div>
             </nav>
 
-            <div class="wrapper">
+            <div class="wrapper one-column">
 
 		        <main class="content" ng-controller="rsrcFltr as fltr">
 
@@ -47,7 +47,7 @@
 
 	    			<div class="resource-list">
 	                    <ul>
-	                        <li class="document" ng-repeat="document in allDocuments | filter: filter | filter: searchDocs">{{document.type}} {{document.title}}</li>
+	                        <li class="document {{document.type}}" ng-repeat="document in allDocuments | filter: filter | filter: searchDocs"><span class="title">{{document.title}}</span> <a class="add action" href="#" title="Add Item"></a></li>
 	                    </ul>
 	    			</div>
 

@@ -157,12 +157,16 @@ header.secondary:after {
   clear: both;
 }
 
-header.secondary h2 {
-  float: left;
+@media (min-width: 600px) {
+  header.secondary h2 {
+    float: left;
+  }
 }
 
-header.secondary .button {
-  float: right;
+@media (min-width: 600px) {
+  header.secondary .button {
+    float: right;
+  }
 }
 
 .utility-nav {
@@ -238,13 +242,12 @@ header.secondary .button {
   content: "\e910";
 }
 
-.resource-list .remove {
+.resource-list .action {
   font-family: "icomoon";
   float: right;
 }
 
-.resource-list .remove:before {
-  content: "\ea0f";
+.resource-list .action:before {
   display: inline-block;
   -webkit-transition: all 300ms 0s ease-in-out;
   -moz-transition: all 300ms 0s ease-in-out;
@@ -253,12 +256,20 @@ header.secondary .button {
   transition: all 300ms 0s ease-in-out;
 }
 
-.resource-list .remove:hover:before {
+.resource-list .action:hover:before {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
+}
+
+.resource-list .remove:before {
+  content: "\ea0f";
+}
+
+.resource-list .add:before {
+  content: "\ea0a";
 }
 
 .filters {
@@ -348,44 +359,54 @@ header.secondary .button {
   clear: both;
 }
 
-.sidebar-left,
-.content {
+.two-column .sidebar-left,
+.two-column .content {
   padding: 0 30px;
 }
 
 @media (min-width: 800px) {
-  .sidebar-left,
-  .content {
+  .two-column .sidebar-left,
+  .two-column .content {
     float: left;
   }
 }
 
-.sidebar-left {
+.two-column .sidebar-left {
   padding: 0 30px;
 }
 
 @media (min-width: 800px) {
-  .sidebar-left {
+  .two-column .sidebar-left {
     width: 33.33333%;
     padding: 0 30px;
   }
 }
 
 @media (min-width: 960px) {
-  .sidebar-left {
+  .two-column .sidebar-left {
     padding: 0 30px 0 0;
   }
 }
 
 @media (min-width: 800px) {
-  .content {
+  .two-column .content {
     width: 66.66666%;
     padding: 0 30px 0 0;
   }
 }
 
 @media (min-width: 960px) {
-  .content {
+  .two-column .content {
+    padding: 0;
+  }
+}
+
+.one-column .content {
+  padding: 0 30px;
+}
+
+@media (min-width: 960px) {
+  .one-column .content {
     padding: 0;
   }
 }
