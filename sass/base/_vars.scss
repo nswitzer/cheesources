@@ -23,6 +23,9 @@ $utility-nav-bg-color: $faded-orange;
 $utility-nav-font-color: darken($brown, 25%);
 $utility-nav-font-color-hover: $gray;
 
+$link-font-color: $burnt-orange;
+$link-font-color-hover: darken($burnt-orange, 15%);
+
 
 
 //
@@ -37,6 +40,7 @@ $courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 // Sitewide Font Definitions
 $base-font-family: $open-sans;
 $base-font-size: 16px;
+$small-base-font-size:  $base-font-size * 0.875;
 $base-font-weight: 400;
 $base-font-color: darken($brown, 25%);
 $base-line-height: 1.5;
