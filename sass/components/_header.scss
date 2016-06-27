@@ -1,0 +1,32 @@
+//
+// Main Site Header Styles
+//
+
+header.main {
+	min-height: 150px;
+	background: $header-bg-color;
+	padding: $spacing-unit;
+}
+
+#page-title {
+	margin: 0;
+}
+
+header.secondary {
+	@include clearfix;
+	margin-bottom: $spacing-unit;
+
+	h2 {
+
+		@include bp($small) {
+			float: left;
+		}
+	}
+
+	.button {
+
+		@include bp($small) {
+			float: right;
+		}
+	}
+}

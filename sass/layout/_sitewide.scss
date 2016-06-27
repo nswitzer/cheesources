@@ -1,0 +1,9 @@
+//
+// Sitewide Layout Definitions
+//
+
+.wrapper {
+	max-width: $content-width;
+	margin: 0 auto;
+	@include clearfix;
+}

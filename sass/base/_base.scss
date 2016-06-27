@@ -1,0 +1,157 @@
+//
+// Basic Global Resets
+//
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+//
+// Base Styling
+//
+
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $base-font-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+
+//
+// Images
+//
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+//
+// Figures
+//
+
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-base-font-size;
+}
+
+
+//
+// Headers
+//
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $header-font-weight;
+    line-height: $header-line-height;
+}
+
+h1 {
+    font-size: $h1-font-size;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    margin-bottom: $spacing-unit/2;
+}
+
+h3 {
+    font-size: $h3-font-size;
+}
+
+h4 {
+    font-size: $h4-font-size;
+}
+
+h5 {
+    font-size: $h5-font-size;
+}
+
+h6 {
+    font-size: $h6-font-size;
+}
+
+
+//
+// Links
+//
+
+a {
+    color: $link-font-color;
+    text-decoration: none;
+    @include fade;
+
+    &:hover {
+        color: $link-font-color-hover;
+        @include fade;
+    }
+}
+
+// Buttons
+.button {
+    @include button;
+}
+
+
+//
+// Lists
+//
+
+nav ul,
+nav ol {
+    list-style: none;
+}
+
+
+//
+// Forms
+//
+
+input,
+select {
+    font-size: $form-input-font-size;
+    color: $form-input-font-color;
+    background-color: $form-input-bg-color;
+    border: 1px solid $form-input-border-color;
+    border-radius: 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type=text] {
+    padding: $spacing-unit/4;
+}
+
+select {
+    padding: $spacing-unit/4;
+    font-size: $form-input-font-size;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../assets/images/select-arrow.png);
+    background-position: 96% 50%;
+    background-repeat: no-repeat;
+    background-color: $form-input-bg-color;
+
+    &::-ms-expand {
+        display: none;
+    }
+} 

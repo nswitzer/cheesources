@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="resources">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>My Profile | Cheesources</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+        <script src="vendor/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+    </head>
+    <body>
+    	<div id="page">
+
+    		<header class="main">
+                <div class="wrapper">
+        		  <h1 id="page-title">My Profile</h1>
+                </div>
+        	</header>
+
+            <nav class="utility-nav">
+                <div class="wrapper">
+                    <ul>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="my-profile.html" class="active">My Profile</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="wrapper two-column">
+
+            	<aside class="sidebar-left">
+                	<div class="profile">
+                    	<div class="profile-image">
+                        	<img src="assets/images/cheese-abe.jpg" />
+                    	</div>
+                    	<div class="profile-meta">
+                        	<div class="name">Nick Switzer</div>
+                        	<div class="title">Amateur Cheese Sculptor</div>
+                    	</div>
+                	</div>
+            	</aside>
+
+            	<main class="content" ng-controller="rsrcFltr as fltr">
+
+                    <header class="secondary">
+                        <h2>My Resources</h2><a href="resources.html" class="button">Find More</a>
+                    </header>
+
+        			<div class="filters">
+                        <input type="text" class="form-control" placeholder="Search Resources" ng-model="searchDocs">
+        				<select name="filter" id="filter" ng-model="filter" ng-options="type for type in docTypes" ng-change="changeFilter()"></select>
+        				<a ng-click="resetFilter()" class="filter-reset">Reset</a>
+        			</div>
+
+        			<div class="resource-list">
+                        <ul>
+                            <li class="document {{document.type}}" ng-repeat="document in myDocuments | filter: filter | filter: searchDocs"><span class="title">{{document.title}}</span> <a class="remove action" href="#" title="Remove Item"></a></li>
+                        </ul>
+        			</div>
+
+        		</main>
+            </div>
+
+    	</div>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+//
+// Mixin Definitions
+//
+
+
+// Media Queries
+@mixin bp($size, $default: false, $direction: 'min-width') {
+    @if ($direction == 'max-width') {
+        $size: $size - 1;
+    }
+
+    @media (#{$direction}: #{$size}) {
+        @content;
+    }
+
+    @if ($default) {
+        .no-mediaqueries & {
+            @content;
+        }
+    }
+}
+
+// Clearfix
+@mixin clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Simple Fade
+@mixin fade($length: .25s) {
+    -o-transition: $length;
+    ms-transition: $length;
+    moz-transition: $length;
+    webkit-transition: $length;
+    transition: $length;
+}
+
+// Button
+
+@mixin button {
+    background-color: $button-bg-color;
+    color: $button-font-color;
+    padding: $spacing-unit/4 $spacing-unit/2;
+    display: inline-block;
+
+    &:hover {
+        background-color: $button-bg-color-hover;
+        color: $button-font-color;
+    }
+}
