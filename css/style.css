@@ -129,6 +129,10 @@ select {
   background-color: #ffffff;
 }
 
+select::-ms-expand {
+  display: none;
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../assets/fonts/icomoon.eot?hh785b");
